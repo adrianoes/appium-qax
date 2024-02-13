@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-02-13T11:24:56.502332" rpa="false" schemaversion="5">
+<suite id="s1" name="Click" source="C:\QAx\appium-qax\yodapp-robot\tests\click.robot">
+<test id="s1-t1" name="Deve realizar um click simples" line="12">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=Android Emulator</arg>
+<arg>automationName=UIAutomator2</arg>
+<arg>app=${EXECDIR}/app/yodapp-beta.apk</arg>
+<arg>udid=emulator-5554</arg>
+<arg>autoGrantPermissions=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-02-13T11:24:56.853789" elapsed="13.670627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-13T11:25:16.202807" level="INFO">xpath criteria: //android.widget.Button[@text="QAX"]
+xpath criteria: //android.widget.Button[@text="QAX"]
+xpath criteria: //android.widget.Button[@text="QAX"]
+xpath criteria: //android.widget.Button[@text="QAX"]
+xpath criteria: //android.widget.Button[@text="QAX"]</msg>
+<arg>${START}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-13T11:25:10.525414" elapsed="5.677393"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-13T11:25:16.204799" level="INFO">Clicking element '//android.widget.Button[@text="QAX"]'.</msg>
+<msg time="2024-02-13T11:25:16.428625" level="INFO">xpath criteria: //android.widget.Button[@text="QAX"]</msg>
+<arg>${START}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-13T11:25:16.203799" elapsed="0.224826"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-13T11:25:16.429623" level="INFO">${hamburguer} = //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<var>${hamburguer}</var>
+<arg>//android.widget.ImageButton[@content-desc="Open navigation drawer"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-13T11:25:16.429623" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-13T11:25:17.869736" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburguer}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-13T11:25:16.430635" elapsed="1.439101"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-13T11:25:17.873252" level="INFO">Clicking element '//android.widget.ImageButton[@content-desc="Open navigation drawer"]'.</msg>
+<msg time="2024-02-13T11:25:18.232608" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Open navigation drawer"]</msg>
+<arg>${hamburguer}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-13T11:25:17.871242" elapsed="0.361366"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-13T11:25:21.234076" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-13T11:25:18.233606" elapsed="3.000470"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-02-13T11:25:21.235122" level="INFO">${menu_item} = //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<var>${menu_item}</var>
+<arg>//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-02-13T11:25:21.234076" elapsed="0.001046"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2024-02-13T11:25:21.539871" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<arg>${menu_item}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2024-02-13T11:25:21.235122" elapsed="0.304749"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-02-13T11:25:21.541870" level="INFO">Clicking element '//*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]'.</msg>
+<msg time="2024-02-13T11:25:21.888700" level="INFO">xpath criteria: //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]</msg>
+<arg>${menu_item}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-02-13T11:25:21.540871" elapsed="0.347829"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-02-13T11:25:24.890246" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-02-13T11:25:21.889702" elapsed="3.000544"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-02-13T11:25:24.890773" elapsed="0.654129"/>
+</kw>
+<status status="PASS" start="2024-02-13T11:24:56.852782" elapsed="28.692120"/>
+</test>
+<status status="PASS" start="2024-02-13T11:24:56.504334" elapsed="29.041568"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Click">Click</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

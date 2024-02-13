@@ -15,8 +15,9 @@ Deve abrir a tela principal
     ...                 udid=emulator-5554
     ...                 autoGrantPermissions=true
            
-    Wait Until Page Contains        Yodapp    10000
-    Wait Until Page Contains        Mobile Training
+    Wait Until Page Contains        Yodapp    10 
+    # quando demorar, tabule e adicione o timeout desejado, o padrão é 5
+    Wait Until Page Contains        Mobile Training    
     Wait Until Page Contains        by Papito
 
     Close Application

@@ -1,3 +1,13 @@
+Desliguei o pc, e agora (abra 2 abas no terminal, uma para deixar o servidor do apium no ar e outra para executar os comandos)
+"cd /c/QAx/appium-qax/yodapp-robot/" navegue até a pasta do projeto com o comando 
+"npx appium" na primeira aba para subir o servidor do appium
+Abro o android studio e depois o virtual device manager
+abro o appium inspector e depois inicializo a sessão
+na segunda aba, "cd /c/QAx/appium-qax/yodapp-robot/" e depois "code ."
+
+
+"robot -d ./logs/ tests/click.robot" para criar a pasta logs, criar os arquivos de report e logs dentro dela e rodar os testes
+
 navegue até a pasta e
 npm init 			e coloque somente o seu nome como autor, teclando enter para todo o resto
 npm i appium@2.0.1 		para instalar a versão do appium compativel com o treinamento. uma boa prática é verificar o número de download da ultima versão
