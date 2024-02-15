@@ -31,8 +31,18 @@ Deve realizar um click simples
     ${menu_item}    Set Variable     //*[@resource-id="com.qaxperience.yodapp:id/navView"]//*[@text="Clique em Botões"]
     Wait Until Element Is Visible    ${menu_item}    10
     Click Element                    ${menu_item}
-    
-    Sleep    3
+
+    ${clique_simples}          Set Variable     //android.widget.TextView[@resource-id="com.qaxperience.yodapp:id/tvItemTitle" and @text="Clique simples"]
+    ${clique_simples_2}        Set Variable     //android.widget.Button[@resource-id="com.qaxperience.yodapp:id/short_click"]
+    ${clique_simples_toast}    Set Variable     //android.widget.Toast[@text="Isso é um clique simples"]
+
+
+    Wait Until Element Is Visible    ${clique_simples}    10
+    Click Element                    ${clique_simples}   
+    Wait Until Element Is Visible    ${clique_simples_2}    10
+    Click Element                    ${clique_simples_2}  
+    Wait Until Page Contains    Isso é um clique simples 
+    # pode ser feito usando o Wait Until Element Is Viisible (passando alguma propriedade diretamente) ou usando o Wait Until Paige Contains (passando textos e características gráficas, o que também é uma propriedade mas mais indiretamente)
 
     Close Application
 

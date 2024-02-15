@@ -23,7 +23,7 @@ em variaveis de sistema, em path, adicione as seguintes variáveis %JAVA_HOME%\b
 para colocar o appium no ar, navegue até "cd /c/QAx/appium-qax/" e execute "npx appium"
 
 instalando o appium inspector
-acesse https://github.com/appium/appium-inspector/releases/tag/v2023.12.2 clique em latest release no lado direito, e depois em faça o download da ultima versão do windows
+acesse https://github.com/appium/appium-inspector/releases/tag/v2023.8.1 
 
 nos capabilities, crie
 {
@@ -53,13 +53,21 @@ navegue até a pasta do projeto com o comando "cd /c/QAx/appium-qax/" e digite o
 abra o appium inspector e clique em start session
 cria uma nova capabilitie com o novo app yodapp localizado na mesma pasta do aplicativo anterior e navega até qax/appium/ e executa o comando "adb devices"
 cola o emulator-5554 na capability criada ficando assim 
+
+{
+  "platformName": "Android",
+  "deviceName": "Android Emulator",
+  "automationName": "UIAutomator2",
+  "app": "C:\\QAx\\appium-qax\\qax-alpha.apk"
+}
+
 {
   "platformName": "Android",
   "appium:deviceName": "Android Emulator",
   "appium:automationName": "UIAutomator2",
-  "appium:app": "C:\\QAx\\appium-qax\\yodapp\\app\\yodapp-beta.apk",
+  "appium:app": "C:\\QAx\\appium-qax\\yodapp-robot\\app\\yodapp-beta.apk",
   "appium:udid": "emulator-5554",
-  "autoGrantPermissions": true
+  "appium:autoGrantPermissions": true
 }
 
 insere a de garantir permissões também
@@ -67,7 +75,7 @@ instalaremos uma versão do appium por projeto, na pasta yodap
 navegue até /c/QAx/appium-qax/yodapp
 npm init 			e coloque somente o seu nome como autor, teclando enter para todo o resto
 npm i appium@2.0.1 		para instalar a versão do appium compativel com o treinamento. uma boa prática é verificar o número de download da ultima versão
-npx appium driver install uiautomator2
+npx appium driver install uiautomator2@2.29.4
 e start na sessão nova
 instale a biblioteca appium executando o comando "pip install --upgrade robotframework-appiumlibrary"
 instale a extensão robot code do daniel biehl no vsc
